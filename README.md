@@ -1,4 +1,4 @@
-# Facebook Messenger bot with wit.ai
+# Facebook Messenger bot with wit.ai integration
 An example Facebook Messenger bot that connects to wit.ai for natural language processing. Follow this tutorial to get it up and running in less than half an hour!
 
 ## You'll need the following before we begin
