@@ -22,11 +22,10 @@
   "repository": "https://github.com/jpbow/ai-messenger-bot",
   "author": "Jamie Bowley <hello@jamiebowley.com>",
   "dependencies": {
-    "node-fetch": "^1.5.1",
-    "node-uuid": "^1.4.7",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "node-fetch": "^1.6.0",
+    "node-uuid": "^1.4.7",
     "request": "^2.74.0"
   },
   "engines": {
