@@ -1,0 +1,49 @@
+{
+  "name": "ai-messenger-bot",
+  "version": "1.0.0",
+  "description": "An example Facebook Messenger bot that connects to wit.ai for natural language processing.",
+  "keywords": [
+    "facebook",
+    "Messenger",
+    "intellegence",
+    "node",
+    "wit",
+    "wit.ai",
+    "bot",
+    "botengine",
+    "bots",
+    "nlp",
+    "automation"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "https://github.com/jpbow/ai-messenger-bot",
+  "author": "Jamie Bowley <hello@jamiebowley.com>",
+  "dependencies": {
+    "node-fetch": "^1.5.1",
+    "node-uuid": "^1.4.7",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "node-fetch": "^1.6.0",
+    "request": "^2.74.0"
+  },
+  "engines": {
+    "node": "6.2.2"
+  },
+  "env": {
+    "WIT_TOKEN": {
+      "description": "Server Access Token from wit.ai (see your wit app settings).",
+      "required": true
+    },
+    "FB_PAGE_TOKEN": {
+      "description": "Facebook Page Token from https://developers.facebook.com/apps/",
+      "required": true
+    },
+    "FB_VERIFY_TOKEN": {
+      "description": "Facebook verification Token. You can make it up.",
+      "required": false
+    }
+  }
+}
