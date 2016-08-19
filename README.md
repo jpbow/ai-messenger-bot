@@ -6,6 +6,10 @@ Follow this tutorial to get the bot up and running in less than half an hour!
 * A wit.ai account
 * A Heroku account
 
+## Quickstart
+
+Coming soon! Should have this finished in the next week.
+
 ## Sources
 * Makes use of code from the official wit.ai messenger.js example (https://github.com/wit-ai/node-wit)
 * This guide loosely follows the 15 minute Facebook bot guide by (https://github.com/jw84/messenger-bot-tutorial)
