@@ -1,7 +1,6 @@
-# Badges
-[![Codacy Badge](https://api.codacy.com/project/badge/grade/7442b6c4eb6b48a890d751c0da5a3b6d)](https://www.codacy.com/app/jpbowley/ai-messenger-bot)
-
 # Facebook Messenger bot with wit.ai integration
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/42c2df2d04664433b100a82e81bca3f0)](https://www.codacy.com/app/jpbowley/ai-messenger-bot?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jpbow/ai-messenger-bot&amp;utm_campaign=Badge_Grade)
+
 Follow this tutorial to get the bot up and running in less than half an hour!
 
 In this tutorial we deploy the NodeJS server directly to Heroku, but it can be run locally by using ngrok so the Facebook Messenger platform can reach you. Documentation on this will be available at a later time.
