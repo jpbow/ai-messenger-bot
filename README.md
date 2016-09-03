@@ -1,3 +1,6 @@
+# Badges
+[![Codacy Badge](https://api.codacy.com/project/badge/grade/7442b6c4eb6b48a890d751c0da5a3b6d)](https://www.codacy.com/app/jpbowley/ai-messenger-bot)
+
 # Facebook Messenger bot with wit.ai integration
 Follow this tutorial to get the bot up and running in less than half an hour!
 
