@@ -13,7 +13,7 @@ const sessions = {};
 const findOrCreateSession = (fbid) => {
   let sessionId;
   // Let's see if we already have a session for the user fbid
-  Object.keys(sessions).forEach(k => {
+  Object.keys(sessions).forEach((k) => {
     if (sessions[k].fbid === fbid) {
       // Yep, got it!
       sessionId = k;
@@ -105,20 +105,11 @@ const actions = {
   },
 };
 
-/*
-// Setting up our bot
-const wit = new Wit({
-  accessToken: WIT_TOKEN,
-  actions,
-  logger: new log.Logger(log.INFO)
-});
-*/
-
 const getWit = () => {
   return new Wit({
-  	accessToken: config.WIT_TOKEN, 
-  	actions,
-  	logger: new log.Logger(log.INFO)
+    accessToken: config.WIT_TOKEN, 
+    actions,
+    logger: new log.Logger(log.INFO)
   });
 };
 

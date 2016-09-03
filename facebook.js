@@ -18,8 +18,8 @@ const fbMessage = (id, text) => {
     headers: {'Content-Type': 'application/json'},
     body,
   })
-  .then(rsp => rsp.json())
-  .then(json => {
+  .then((rsp) => rsp.json())
+  .then((json) => {
     if (json.error && json.error.message) {
       throw new Error(json.error.message);
     }
@@ -27,12 +27,12 @@ const fbMessage = (id, text) => {
   });
 };
 
-const fbQuickReplyMessage = (id, text, quick_replies) => {
+const fbQuickReplyMessage = (id, text, quickReplies) => {
   const body = JSON.stringify({
     recipient: { id },
     message: { 
       text,
-      quick_replies
+      quickReplies
     }
   });
   const qs = 'access_token=' + encodeURIComponent(config.FB_PAGE_TOKEN);
@@ -41,8 +41,8 @@ const fbQuickReplyMessage = (id, text, quick_replies) => {
     headers: {'Content-Type': 'application/json'},
     body,
   })
-  .then(rsp => rsp.json())
-  .then(json => {
+  .then((rsp) => rsp.json())
+  .then((json) => {
     if (json.error && json.error.message) {
       throw new Error(json.error.message);
     }
@@ -60,12 +60,12 @@ const fbQuickReplyMessage = (id, text, quick_replies) => {
  *
  */
 function verifyRequestSignature(req, res, buf) {
-  var signature = req.headers["x-hub-signature"];
+  var signature = req.headers['x-hub-signature'];
 
   if (!signature) {
     // For testing, let's log an error. In production, you should throw an
     // error.
-    console.error("Couldn't validate the signature.");
+    console.error('Couldn\'t validate the signature.');
   } else {
     var elements = signature.split('=');
     var method = elements[0];
@@ -76,13 +76,13 @@ function verifyRequestSignature(req, res, buf) {
                         .digest('hex');
 
     if (signatureHash != expectedHash) {
-      throw new Error("Couldn't validate the request signature.");
+      throw new Error('Couldn\'t validate the request signature.');
     }
   }
 }
 
 module.exports = {
-  fbMessage: fbMessage,
-  fbQuickReplyMessage: fbQuickReplyMessage,
-  verifyRequestSignature: verifyRequestSignature
+  fbMessage,
+  fbQuickReplyMessage,
+  verifyRequestSignature
 };
