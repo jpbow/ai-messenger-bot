@@ -4,7 +4,7 @@
 // We assume you have:
 // * a Wit.ai bot setup (https://wit.ai/docs/quickstart)
 // * a Messenger Platform setup (https://developers.facebook.com/docs/messenger-platform/quickstart)
-// You need to `npm install` the following dependencies: body-parser, express, request.
+// * a Heroku account
 //
 const bodyParser = require('body-parser');
 const crypto = require('crypto');
@@ -14,7 +14,7 @@ const request = require('request');
 
 // get Bot, const, and Facebook API
 const bot = require('./bot.js');
-const Config = require('./const.js');
+const config = require('./const.js');
 const FB = require('./facebook.js');
 
 // Webserver parameter
@@ -41,7 +41,7 @@ app.get('/', function(req, res) {
 // Webhook setup
 app.get('/webhook', (req, res) => {
   if (req.query['hub.mode'] === 'subscribe' &&
-    req.query['hub.verify_token'] === Config.FB_VERIFY_TOKEN) {
+    req.query['hub.verify_token'] === config.FB_VERIFY_TOKEN) {
     res.send(req.query['hub.challenge']);
   } else {
     res.sendStatus(400);

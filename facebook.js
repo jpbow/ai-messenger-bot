@@ -1,7 +1,7 @@
 'use strict';
 
 const request = require('request');
-const Config = require('./const.js');
+const config = require('./const.js');
 
 
 // See the Send API reference
@@ -12,7 +12,7 @@ const fbMessage = (id, text) => {
     recipient: { id },
     message: { text },
   });
-  const qs = 'access_token=' + encodeURIComponent(FB_PAGE_TOKEN);
+  const qs = 'access_token=' + encodeURIComponent(config.FB_PAGE_TOKEN);
   return fetch('https://graph.facebook.com/me/messages?' + qs, {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
@@ -35,7 +35,7 @@ const fbQuickReplyMessage = (id, text, quick_replies) => {
       quick_replies
     }
   });
-  const qs = 'access_token=' + encodeURIComponent(FB_PAGE_TOKEN);
+  const qs = 'access_token=' + encodeURIComponent(config.FB_PAGE_TOKEN);
   return fetch('https://graph.facebook.com/me/messages?' + qs, {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
@@ -71,7 +71,7 @@ function verifyRequestSignature(req, res, buf) {
     var method = elements[0];
     var signatureHash = elements[1];
 
-    var expectedHash = crypto.createHmac('sha1', FB_APP_SECRET)
+    var expectedHash = crypto.createHmac('sha1', config.FB_APP_SECRET)
                         .update(buf)
                         .digest('hex');
 

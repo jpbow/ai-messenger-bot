@@ -3,7 +3,7 @@
 const Wit = require('./lib/wit.js').Wit;
 const log = require('./lib/log.js');
 const FB = require('./facebook.js');
-const Config = require('./const.js');
+const config = require('./const.js');
 
 // This will contain all user sessions.
 // Each session has an entry:
@@ -50,7 +50,7 @@ const actions = {
       // Yay, we found our recipient!
       // Let's forward our bot response to her.
       // We return a promise to let our bot know when we're done sending
-      return fbMessage(recipientId, text)
+      return FB.fbMessage(recipientId, text)
       .then(() => null)
       .catch((err) => {
         console.error(
@@ -116,7 +116,7 @@ const wit = new Wit({
 
 const getWit = () => {
   return new Wit({
-  	accessToken: Config.WIT_TOKEN, 
+  	accessToken: config.WIT_TOKEN, 
   	actions,
   	logger: new log.Logger(log.INFO)
   });
