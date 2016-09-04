@@ -7,8 +7,8 @@ Follow this tutorial to get the bot up and running in less than half an hour! I 
 In this tutorial we deploy the NodeJS server directly to Heroku, but it can be run locally by using ngrok so the Facebook Messenger platform can reach you. Documentation on this will be available at a later time.
 
 ## You'll need the following before we begin
-* A wit.ai account
-* A Heroku account
+* [A wit.ai account](https://wit.ai/)
+* [A Heroku account](https://www.heroku.com/)
 
 ## Quickstart
 
