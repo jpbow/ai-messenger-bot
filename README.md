@@ -28,7 +28,7 @@ Note: The following steps only cover pushing the code to Heroku. Steps to integr
     
 3. Download the .zip file containing all of the files in this repository and extract them to a folder on your computer.
     
-4. Navigate to that folder in the terminal and install the npm dependencies as specified in package.json
+4. Navigate to that folder in the terminal and install the npm dependencies (which are listed in package.json).
    
     ```
     npm install
@@ -39,7 +39,7 @@ Note: The following steps only cover pushing the code to Heroku. Steps to integr
     ```
     git init
     git add .
-    git commit --message 'Initial commit'
+    git commit -m 'Initial commit'
     heroku create
     ```
 6. Go to the Heroku website and from the Dashboard click on your app's name. In the Settings menu you'll be able to set the Config          Variables. There are three that you need enter: FB_APP_SECRET, FB_PAGE_TOKEN and WIT_TOKEN.
