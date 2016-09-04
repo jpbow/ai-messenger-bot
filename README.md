@@ -17,17 +17,23 @@ Note: The following steps only cover pushing the code to Heroku. Steps to integr
 1. Install the Heroku toolbelt from here https://toolbelt.heroku.com to launch, stop and monitor instances. Sign up for free at https://www.heroku.com if you don't have an account yet.
 
 2. Install Node from here https://nodejs.org, this will be the server environment. Then open up Terminal or Command Line Prompt and make sure you've got the very most recent version of npm by installing it again:
+
     ```
     sudo npm install npm -g
     ```
+    
 3. Clone this repository somewhere on your computer
+   
     ```
     git clone https://github.com/jpbow/ai-messenger-bot.git
     ```
+    
 4. Install the npm dependencies as specified in package.json
+   
     ```
     npm install
     ```
+    
 5. Commit all the code with Git then create a new Heroku instance and push the code to the cloud.
 
     ```
