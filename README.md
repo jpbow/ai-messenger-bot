@@ -12,7 +12,33 @@ In this tutorial we deploy the NodeJS server directly to Heroku, but it can be r
 
 ## Quickstart
 
-Coming soon! Should have this finished in the next week.
+Note: The following steps only cover pushing the code to Heroku. Steps to integrate Wit.ai and Facebook Messenger coming over the next few days.
+
+1. Install the Heroku toolbelt from here https://toolbelt.heroku.com to launch, stop and monitor instances. Sign up for free at https://www.heroku.com if you don't have an account yet.
+
+2. Install Node from here https://nodejs.org, this will be the server environment. Then open up Terminal or Command Line Prompt and make sure you've got the very most recent version of npm by installing it again:
+    ```
+    sudo npm install npm -g
+    ```
+3. Clone this repository somewhere on your computer
+    ```
+    git clone https://github.com/jpbow/ai-messenger-bot.git
+    ```
+4. Install the npm dependencies as specified in package.json
+    ```
+    npm install
+    ```
+5. Commit all the code with Git then create a new Heroku instance and push the code to the cloud.
+
+    ```
+    git init
+    git add .
+    git commit --message 'Initial commit'
+    heroku create
+    git push heroku master
+    ```
+    
+All going well, the server is now running on Heroku!
 
 ## Sources
 * Makes use of code from the official wit.ai messenger.js example (https://github.com/wit-ai/node-wit)
