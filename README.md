@@ -14,6 +14,9 @@ In this tutorial we deploy the NodeJS server directly to Heroku, but it can be r
 
 Note: The following steps only cover pushing the code to Heroku. Steps to integrate Wit.ai and Facebook Messenger coming over the next few days.
 
+* Need to set up Facebook App and Page first
+* Need to set config vars in Heroku before pushing
+
 1. Install the Heroku toolbelt from here https://toolbelt.heroku.com to launch, stop and monitor instances. Sign up for free at https://www.heroku.com if you don't have an account yet.
 
 2. Install Node from here https://nodejs.org, this will be the server environment. Then open up Terminal or Command Line Prompt and make sure you've got the very most recent version of npm by installing it again:
