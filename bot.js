@@ -109,3 +109,11 @@ const getWit = () => {
 };
 
 exports.getWit = getWit;
+
+module.exports = {
+  getWit,
+  sessions,
+  findOrCreateSession,
+  firstEntityValue,
+  actions
+};
