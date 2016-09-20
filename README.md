@@ -14,8 +14,6 @@ In this tutorial we deploy the NodeJS server directly to Heroku, but it can be r
 
 ### Launch the server
 
-Note: The following steps only cover pushing the code to Heroku. Steps to integrate Wit.ai and Facebook Messenger coming over the next few days.
-
 1. Install the Heroku toolbelt from here https://toolbelt.heroku.com to launch, stop and monitor instances. Sign up for free at https://www.heroku.com if you don't have an account yet.
 
 2. Install Node from here https://nodejs.org, this will be the server environment. Then open up Terminal or Command Line Prompt and make sure you've got the very most recent version of npm by installing it again:
@@ -56,7 +54,7 @@ To be able to message our bot from Facebook we will need both a Facebook Page an
 
 	![Page Access Token generation screenshot](/demo/image_2.png)
 
-4. On the same page click on 'Setup Webhooks'. Fill in your Heroku URL (include the '/webhook' part too) and the token (the one shown is the default) and check the same subscription boxes as shown below.
+4. On the same page click on 'Setup Webhooks'. Fill in your Heroku URL (include the '/webhook/' part too) and the token (the one shown is the default) and check the same subscription boxes as shown below.
 
 	![Webhook setup screenshot](/demo/image_3.png)
 

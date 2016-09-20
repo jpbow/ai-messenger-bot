@@ -69,41 +69,35 @@ const actions = {
   // You should implement your custom actions here
   // See https://wit.ai/docs/quickstart
 
-  // Get the current snow report for a specified ski field
-  getSnowReport({context, entities}) {
+  // Get the greeting for the user
+  getGreeting({sessionId, context, entities}) {
     return new Promise(function(resolve, reject) {
       // Here should go the api call, e.g.:
       // context.forecast = apiCall(context.loc)
-      context.skiField = firstEntityValue(entities, 'ski_field');
-      context.snowReport = 'Great day up here!';
-      return resolve(context);
+      // Get the users name based on their id
+      const qs = 'access_token=' + encodeURIComponent(config.FB_PAGE_TOKEN);
+      return fetch('https://graph.facebook.com/v2.6/' + sessions[sessionId].fbid + '?fields=first_name&' + qs, {
+        method: 'GET',
+        headers: {'Content-Type': 'application/json'},
+      })
+      .then(rsp => rsp.json())
+      .then(json => {
+        // Catch any error in retrieving the name
+        if (json.error && json.error.message) {
+          throw new Error(json.error.message);
+        }
+
+        // Add name to greeting if we could find it
+        if (json.first_name){
+          context.greeting =  + 'Hey there ' + json.first_name + '! How can I help you today?';
+        } else {
+          context.greeting =  + 'Hey there! How can I help you today?';
+        }
+
+        return resolve(context);
+      });
     });
-  },
-
-  // Get the snow forecast for a specified ski field for a specified date
-  getSnowForecast({context, entities}) {
-    return new Promise(function(resolve, reject) {
-      // Here should go the api call, e.g.:
-      // context.forecast = apiCall(context.loc)
-      var datetime = firstEntityValue(entities, 'datetime');
-
-      // Check if datetime exists
-      if (datetime) {
-        context.skiField = firstEntityValue(entities, 'ski_field');
-        context.snowForecast = 'Great day up here!';
-
-        delete context.missingDate;
-      } else {
-        context.missingDate = true;
-
-        delete context.skiField;
-        delete context.snowForecast;
-      }
-
-      return resolve(context);
-    });
-  },
-};
+  };
 
 const getWit = () => {
   return new Wit({
