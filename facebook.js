@@ -28,6 +28,27 @@ const fbMessage = (id, text) => {
   });
 };
 
+// Enable typing icon
+const fbSetTypingIndicator = (id) => {
+  const body = JSON.stringify({
+    recipient: { id },
+    sender_action: "typing_on"
+  });
+  const qs = 'access_token=' + encodeURIComponent(config.FB_PAGE_TOKEN);
+  return fetch('https://graph.facebook.com/me/messages?' + qs, {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body,
+  })
+  .then(rsp => rsp.json())
+  .then(json => {
+    if (json.error && json.error.message) {
+      throw new Error(json.error.message);
+    }
+    return json;
+  });
+};
+
 const fbQuickReplyMessage = (id, text, quickReplies) => {
   const body = JSON.stringify({
     recipient: { id },
@@ -84,6 +105,7 @@ function verifyRequestSignature(req, res, buf) {
 
 module.exports = {
   fbMessage,
+  fbSetTypingIndicator,
   fbQuickReplyMessage,
   verifyRequestSignature
 };

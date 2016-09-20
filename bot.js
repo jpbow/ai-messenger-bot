@@ -4,6 +4,7 @@ const Wit = require('./lib/wit.js').Wit;
 const log = require('./lib/log.js');
 const FB = require('./facebook.js');
 const config = require('./const.js');
+const fetch = require('node-fetch');
 
 // This will contain all user sessions.
 // Each session has an entry:

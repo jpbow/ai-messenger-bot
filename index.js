@@ -98,14 +98,8 @@ app.post('/webhook', (req, res) => {
 
               // Want to reset certain context variables so they don't
               // interfere with future communication
-              if (context['skiField']) {
-                delete context['skiField'];
-              }
-              if (context['snowReport']) {
-                delete context['snowReport'];
-              }
-              if (context['snowForecast']) {
-                delete context['snowForecast'];
+              if (context['greeting']) {
+                delete context['greeting'];
               }
 
               // Updating the user's current session state
