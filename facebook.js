@@ -1,8 +1,9 @@
 'use strict';
 
 const request = require('request');
+const crypto = require('crypto');
+const fetch = require('node-fetch');
 const config = require('./const.js');
-
 
 // See the Send API reference
 // https://developers.facebook.com/docs/messenger-platform/send-api-reference
