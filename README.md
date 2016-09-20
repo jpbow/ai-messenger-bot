@@ -81,12 +81,12 @@ To be able to message our bot from Facebook we will need both a Facebook Page an
 
 ### Finish setting up the bot
 
-Finally, we're now going to take those variables you saved earlier (the Page Access Token and App Secret) and enter them into Heroku so it can connect to Facebook. The best way to do this is to set each of the variables as config vars in Heroku (keeps the app secrets out of version control).
+Finally, we're now going to take those variables you saved earlier (the Page Access Token, App Secret and Server Access Token) and enter them into Heroku so it has permission to connect to Facebook and wit.ai. The best way to do this is to set each of the variables as config vars in Heroku (it keeps the app secrets out of version control).
 
 1. Go to your Heroku app and go to the Settings menu. Here you can add each of the variables in. Use the same naming as below.
 
     
-All going well, the server is now running on Heroku!
+All going well, you can now message your bot!
 
 ## Sources
 * Makes use of code from the official wit.ai messenger.js example (https://github.com/wit-ai/node-wit)
