@@ -74,11 +74,11 @@ To be able to message our bot from Facebook we will need both a Facebook Page an
 
 1. Go to wit.ai and create a new app.
 
-2. In the new app, create your first story. We're just going to start off with a simple story that says hello to the user when they message the bot. The server that we created on Heroku already has a function called getGreeting() which fetches the users name from Facebook and responds to messages with the message "Hi usersName! How can I help?". 
+2. In the new app, create your first story. We're just going to start off with a simple story that says hello to the user when they message the bot. The server that we created on Heroku already has a function called getGreeting() which fetches the users name from Facebook and responds to messages with the message "Hi usersName! How can I help?". Construct your story like the one shown below
 
-3. Get the users to clone my example bot??
+    ![wit.ai story screenshot](/demo/image_6.png)
 
-4. Go to your bots Settings menu and go to the API Details section where you should find a Sever Access Token. Save this as we will need it later.
+3. Go to your bots Settings menu and go to the API Details section where you should find a Sever Access Token. Save this as we will need it later.
 
 ### Finish setting up the bot
 
