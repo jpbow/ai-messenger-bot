@@ -81,8 +81,8 @@ const actions = {
         method: 'GET',
         headers: {'Content-Type': 'application/json'},
       })
-      .then(rsp => rsp.json())
-      .then(json => {
+      .then((rsp) => rsp.json())
+      .then((json) => {
         // Catch any error in retrieving the name
         if (json.error && json.error.message) {
           throw new Error(json.error.message);
