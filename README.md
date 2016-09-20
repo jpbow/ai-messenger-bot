@@ -46,11 +46,11 @@ Note: The following steps only cover pushing the code to Heroku. Steps to integr
 
 To be able to message our bot from Facebook we will need both a Facebook Page and an App. Firstly create a page [here](https://www.facebook.com/pages/create/) or use an existing one.
 
-1. Now go [here](https://developers.facebook.com/apps/) and create a Facebook App.
+1. Create a Facebook App [here](https://developers.facebook.com/apps/).
 
 	![FB App creation screenshot](/demo/image_1.jpg)
 
-2. Then go to 'Add Products' -> 'Messenger' and add it as a product.
+2. Navigate to 'Add Products' -> 'Messenger' and add it as a product.
 
 3. Select the page you created ealier and use it to generate a Page Access Token. Save this somewhere as we're going to need it later.
 
@@ -60,7 +60,7 @@ To be able to message our bot from Facebook we will need both a Facebook Page an
 
 	![Webhook setup screenshot](/demo/image_3.png)
 
-5. Now using the Page Access Token you saved earlier, go back to the Terminal and enter this command to trigger the Facebook App to send messages.
+5. Using the Page Access Token you saved earlier, go back to the Terminal and enter this command to trigger the Facebook App to send messages.
 
 	```
 	curl -X POST "https://graph.facebook.com/v2.6/me/subscribed_apps?access_token=<PAGE_ACCESS_TOKEN>"
@@ -76,13 +76,13 @@ To be able to message our bot from Facebook we will need both a Facebook Page an
 
 3. Get the users to clone my example bot??
 
-4. Now go to your bots Settings menu and go to the API Details section where you should find a Sever Access Token. Save this as we will need it later.
+4. Go to your bots Settings menu and go to the API Details section where you should find a Sever Access Token. Save this as we will need it later.
 
 ### Finish setting up the bot
 
 Finally, we're now going to take those variables you saved earlier (the Page Access Token, App Secret and Server Access Token) and enter them into Heroku so it has permission to connect to Facebook and wit.ai. The best way to do this is to set each of the variables as config vars in Heroku (it keeps the app secrets out of version control).
 
-1. Go to your Heroku app and go to the Settings menu. Here you can add each of the variables in. Use the same naming as below.
+1. In the Settings menu of your Heroku app you'll be able to enter in each of the three variables. Make sure to use the same naming as below.
 
 	![Heroku config var setup screenshot](/demo/image_4.png)
 
