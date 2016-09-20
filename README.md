@@ -62,13 +62,7 @@ To be able to message our bot from Facebook we will need both a Facebook Page an
 
 	![Webhook subscription screenshot](/demo/image_5.png)
 
-6. Using the Page Access Token you saved earlier, go back to the Terminal and enter this command to trigger the Facebook App to send messages.
-
-	```
-	curl -X POST "https://graph.facebook.com/v2.6/me/subscribed_apps?access_token=<PAGE_ACCESS_TOKEN>"
-	```
-
-7. Finally, in the App menu, go to Settings -> Basic and get the App Secret and save it somewhere too, as we'll need it later.
+6. Finally, in the App menu, go to Settings -> Basic and get the App Secret and save it somewhere too, as we'll need it later.
 
 ### Setup wit.ai
 
