@@ -97,7 +97,8 @@ const actions = {
         return resolve(context);
       });
     });
-  };
+  },
+};
 
 const getWit = () => {
   return new Wit({
