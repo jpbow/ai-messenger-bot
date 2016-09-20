@@ -48,17 +48,17 @@ To be able to message our bot from Facebook we will need both a Facebook Page an
 
 1. Now go [here](https://developers.facebook.com/apps/) and create a Facebook App.
 
-![FB App creation screenshot](/demo/image_1.jpg)
+	![FB App creation screenshot](/demo/image_1.jpg)
 
 2. Then go to 'Add Products' -> 'Messenger' and add it as a product.
 
 3. Select the page you created ealier and use it to generate a Page Access Token. Save this somewhere as we're going to need it later.
 
-![Page Access Token generation screenshot](/demo/image_2.png)
+	![Page Access Token generation screenshot](/demo/image_2.png)
 
 4. On the same page click on 'Setup Webhooks'. Fill in your Heroku URL (include the '/webhook' part too) and the token (the one shown is the default) and check the same subscription boxes as shown below.
 
-![Webhook setup screenshot](/demo/image_3.png)
+	![Webhook setup screenshot](/demo/image_3.png)
 
 5. Now using the Page Access Token you saved earlier, go back to the Terminal and enter this command to trigger the Facebook App to send messages.
 
@@ -84,9 +84,8 @@ Finally, we're now going to take those variables you saved earlier (the Page Acc
 
 1. Go to your Heroku app and go to the Settings menu. Here you can add each of the variables in. Use the same naming as below.
 
-![Heroku config var setup screenshot](/demo/image_4.png)
+	![Heroku config var setup screenshot](/demo/image_4.png)
 
-    
 All going well, you can now message your bot!
 
 ## Sources
