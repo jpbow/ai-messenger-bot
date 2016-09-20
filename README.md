@@ -32,20 +32,13 @@ Note: The following steps only cover pushing the code to Heroku. Steps to integr
     npm install
     ```
     
-5. Commit all the code with Git then create a new Heroku instance.
+5. Commit all the code with Git then create a new Heroku instance and push the code to the cloud.
 
     ```
     git init
     git add .
     git commit -m 'Initial commit'
     heroku create
-    git push heroku master
-    ```
-6. Go to the Heroku website and from the Dashboard click on your app's name. In the Settings menu you'll be able to set the Config          Variables. There are three that you need enter: FB_APP_SECRET, FB_PAGE_TOKEN and WIT_TOKEN.
-    
-7.  Now that we've set our Config Variables we can push the code to the cloud.
-
-    ```
     git push heroku master
     ```
 
@@ -55,11 +48,17 @@ To be able to message our bot from Facebook we will need both a Facebook Page an
 
 1. Now go [here](https://developers.facebook.com/apps/) and create a Facebook App.
 
+![FB App creation screenshot](/demo/image_1.jpg)
+
 2. Then go to 'Add Products' -> 'Messenger' and add it as a product.
 
 3. Select the page you created ealier and use it to generate a Page Access Token. Save this somewhere as we're going to need it later.
 
+![Page Access Token generation screenshot](/demo/image_2.png)
+
 4. On the same page click on 'Setup Webhooks'. Fill in your Heroku URL (include the '/webhook' part too) and the token (the one shown is the default) and check the same subscription boxes as shown below.
+
+![Webhook setup screenshot](/demo/image_3.png)
 
 5. Now using the Page Access Token you saved earlier, go back to the Terminal and enter this command to trigger the Facebook App to send messages.
 
@@ -84,6 +83,8 @@ To be able to message our bot from Facebook we will need both a Facebook Page an
 Finally, we're now going to take those variables you saved earlier (the Page Access Token, App Secret and Server Access Token) and enter them into Heroku so it has permission to connect to Facebook and wit.ai. The best way to do this is to set each of the variables as config vars in Heroku (it keeps the app secrets out of version control).
 
 1. Go to your Heroku app and go to the Settings menu. Here you can add each of the variables in. Use the same naming as below.
+
+![Heroku config var setup screenshot](/demo/image_4.png)
 
     
 All going well, you can now message your bot!
