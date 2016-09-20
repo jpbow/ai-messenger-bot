@@ -90,7 +90,7 @@ const actions = {
 
         // Add name to greeting if we could find it
         if (json.first_name){
-          context.greeting =  + 'Hey there ' + json.first_name + '! How can I help you today?';
+          context.greeting =  + 'Hi ' + json.first_name + '! How can I help you today?';
         } else {
           context.greeting =  + 'Hey there! How can I help you today?';
         }

@@ -67,6 +67,9 @@ app.post('/webhook', (req, res) => {
           // This is needed for our bot to figure out the conversation history
           const sessionId = bot.findOrCreateSession(sender);
 
+          // Show we're processing the message by turning on the typing indicator
+          FB.fbSetTypingIndicator(sender).catch(console.error);
+
           // We retrieve the message content
           const {text, attachments} = event.message;
 
@@ -98,9 +101,6 @@ app.post('/webhook', (req, res) => {
 
               // Want to reset certain context variables so they don't
               // interfere with future communication
-              if (context['greeting']) {
-                delete context['greeting'];
-              }
 
               // Updating the user's current session state
               bot.sessions[sessionId].context = context;
