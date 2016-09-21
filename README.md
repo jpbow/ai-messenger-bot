@@ -16,7 +16,7 @@ In this tutorial we deploy the NodeJS server directly to Heroku, but it can be r
 
 1. Install the Heroku toolbelt from here https://toolbelt.heroku.com to launch, stop and monitor instances. Sign up for free at https://www.heroku.com if you don't have an account yet.
 
-2. Install Node from here https://nodejs.org, this will be the server environment. Then open up Terminal or Command Line Prompt and make sure you've got the very most recent version of npm by installing it again:
+2. Install NodeJS from https://nodejs.org, then open the terminal and make sure you've got the most recent version of npm.
 
     ```
     sudo npm install npm -g
