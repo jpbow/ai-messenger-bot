@@ -84,7 +84,7 @@ Finally, we're now going to take those variables you saved earlier (the Page Acc
 
 2. All going well, you can now message your bot!
 
-    ![Sending the first message to your bot](/demo/image_6.png)
+    ![Sending the first message to your bot](/demo/image_7.png)
 
 ## Sources
 * Makes use of code from the official wit.ai messenger.js example (https://github.com/wit-ai/node-wit)
