@@ -82,7 +82,9 @@ Finally, we're now going to take those variables you saved earlier (the Page Acc
 
 	![Heroku config var setup screenshot](/demo/image_4.png)
 
-All going well, you can now message your bot!
+2. All going well, you can now message your bot!
+
+    ![Sending the first message to your bot](/demo/image_6.png)
 
 ## Sources
 * Makes use of code from the official wit.ai messenger.js example (https://github.com/wit-ai/node-wit)

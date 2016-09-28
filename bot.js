@@ -85,7 +85,8 @@ const actions = {
       .then((json) => {
         // Catch any error in retrieving the name
         if (json.error && json.error.message) {
-          throw new Error(json.error.message);
+          // Log the error
+          console.log(json.error.message);
         }
 
         // Add name to greeting if we could find it
